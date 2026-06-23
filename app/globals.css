@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --card: #f2f7f7;
+  --ring: #06858e;
+  --input: #d9eaea;
+  --muted: #e0eaea;
+  --accent: #c9e5e7;
+  --border: #cde0e2;
+  --radius: 0.125rem;
+  --chart-1: #06858e;
+  --chart-2: #1e9ea6;
+  --chart-3: #37b6be;
+  --chart-4: #5dc7ce;
+  --chart-5: #8ad8dd;
+  --popover: #f2f7f7;
+  --primary: #06858e;
+  --sidebar: #daebed;
+  --font-mono: "Times New Roman", Times, serif;
+  --font-sans: "Times New Roman", Times, serif;
+  --secondary: #d9eaea;
+  --background: #e8f0f0;
+  --font-serif: "Times New Roman", Times, serif;
+  --foreground: #0a4a55;
+  --destructive: #d13838;
+  --sidebar-ring: #06858e;
+  --sidebar-accent: #c9e5e7;
+  --sidebar-border: #cde0e2;
+  --card-foreground: #0a4a55;
+  --sidebar-primary: #06858e;
+  --muted-foreground: #427a7e;
+  --accent-foreground: #0a4a55;
+  --popover-foreground: #0a4a55;
+  --primary-foreground: #ffffff;
+  --sidebar-foreground: #0a4a55;
+  --secondary-foreground: #0a4a55;
+  --destructive-foreground: #ffffff;
+  --sidebar-accent-foreground: #0a4a55;
+  --sidebar-primary-foreground: #ffffff;
+}
+
+.dark {
+  --card: #000;
+  --ring: #4de8e8;
+  --input: #111;
+  --muted: #111;
+  --accent: #111;
+  --border: #222;
+  --radius: 0.125rem;
+  --chart-1: #4de8e8;
+  --chart-2: #36a5a5;
+  --chart-3: #2d8a8a;
+  --chart-4: #19595e;
+  --chart-5: #0e383c;
+  --popover: #000;
+  --primary: #4de8e8;
+  --sidebar: #000;
+  --font-mono: "Times New Roman", Times, serif;
+  --font-sans: "Times New Roman", Times, serif;
+  --font-serif: "Times New Roman", Times, serif;
+  --secondary: #111;
+  --background: #000;
+  --foreground: #4de8e8;
+  --destructive: #e83c3c;
+  --sidebar-ring: #4de8e8;
+  --sidebar-accent: #111;
+  --sidebar-border: #222;
+  --card-foreground: #4de8e8;
+  --sidebar-primary: #4de8e8;
+  --muted-foreground: #36a5a5;
+  --accent-foreground: #4de8e8;
+  --popover-foreground: #4de8e8;
+  --primary-foreground: #000;
+  --sidebar-foreground: #4de8e8;
+  --secondary-foreground: #4de8e8;
+  --destructive-foreground: #f2f2f2;
+  --sidebar-accent-foreground: #4de8e8;
+  --sidebar-primary-foreground: #000;
+}
+
+@theme inline {
+  --color-card: var(--card);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-radius: var(--radius);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-popover: var(--popover);
+  --color-primary: var(--primary);
+  --color-sidebar: var(--sidebar);
+  --color-secondary: var(--secondary);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-destructive: var(--destructive);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-card-foreground: var(--card-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: var(--foreground);
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* RTL scrollbar fix: hide track so it doesn't show a gray bar on the left */
+html::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.15) transparent;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
