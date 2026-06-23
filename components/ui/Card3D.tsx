@@ -5,14 +5,29 @@ import { cn } from "@/lib/utils";
 export const Card3D = ({
     className,
     children,
+    title,
+    description,
+    icon,
+    theme,
+    onClick,
 }: {
     className?: string;
-    children: React.ReactNode;
-    title?: string; // Optional so it never crashes
+    children?: React.ReactNode;
+    title?: string;
+    description?: string;
+    icon?: React.ReactNode;
+    theme?: string;
+    onClick?: () => void;
 }) => {
     return (
-        <div className={cn("rounded-xl relative", className)}>
+        <button
+            onClick={onClick}
+            className={cn("rounded-xl relative w-full text-right", className)}
+        >
+            {icon && <div className="mb-2">{icon}</div>}
+            {title && <h3 className="text-lg font-bold text-white mb-1">{title}</h3>}
+            {description && <p className="text-sm text-neutral-400">{description}</p>}
             {children}
-        </div>
+        </button>
     );
 };
