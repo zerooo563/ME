@@ -122,13 +122,6 @@ function CertificateUploadCard({
           )}
 
           <p className="text-xs text-neutral-300 truncate">{cert.name}</p>
-
-          <button
-            onClick={(e) => { e.stopPropagation(); fileRef.current?.click(); }}
-            className="mt-1 text-[10px] text-neutral-500 underline underline-offset-2"
-          >
-            تغيير الشهادة
-          </button>
         </div>
       ) : (
         /* ── Empty/Upload state ── */
